@@ -23,7 +23,7 @@ Route::get('/sms', function(Request $request) {
   $response = new MessagingResponse();
   $msg = $request->Body;
   if($msg == '911' || $msg == 'HELP' || $msg == 'INFO'){
-    $request->message('Sending your number to nearest member!');
+    $response->message('Sending your number to nearest member!');
   }
   else {
     $response->message(
