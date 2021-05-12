@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Twilio\TwiML\MessagingResponse;
+use Twilio\TwiML\VoiceResponse;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/sms', function(Request $request) {
+Route::post('/sms', function(Request $request) {
   header("content-type: text/xml");
   $response = new MessagingResponse();
   $msg = $request->Body;
@@ -33,4 +34,12 @@ Route::get('/sms', function(Request $request) {
 
 
   echo $response;
+});
+Route::post('/voice', function(Request $request){
+  $response->say(
+    "Welcome to the HEART network! Please hold and we will connect you to the nearest member!", 
+    array("voice" => "alice")
+);
+
+echo $response;
 });
