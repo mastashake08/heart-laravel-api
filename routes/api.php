@@ -36,6 +36,7 @@ Route::post('/sms', function(Request $request) {
   echo $response;
 });
 Route::post('/voice', function(Request $request){
+  header("content-type: text/xml");
   $response->say(
     "Welcome to the HEART network!",
     array("voice" => "alice")
