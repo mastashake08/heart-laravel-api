@@ -37,9 +37,12 @@ Route::post('/sms', function(Request $request) {
 });
 Route::post('/voice', function(Request $request){
   $response->say(
-    "Welcome to the HEART network! Please hold and we will connect you to the nearest member!", 
+    "Welcome to the HEART network!",
     array("voice" => "alice")
-);
-
+  );
+  $response->say(
+    "Please hold and we will connect you to the nearest member!",
+    array("voice" => "alice")
+  );
 echo $response;
 });
