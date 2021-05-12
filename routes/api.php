@@ -20,11 +20,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/sms', function(Request $request) {
   header("content-type: text/xml");
-
   $response = new MessagingResponse();
-  $response->message(
-      "Welcome to HEART!"
-  );
+  $msg = $request->Body;
+  if($msg == '911' || $msg == 'HELP' || $msg == 'INFO'){
+    $request->message('Sending your number to nearest member!');
+  }
+  else {
+    $response->message(
+        "Welcome to HEART! Please response with the following: 911, HELP, INFO"
+    );
+  }
+
 
   echo $response;
 });
