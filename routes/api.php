@@ -41,5 +41,11 @@ Route::post('/voice', function(Request $request){
     "Welcome to the HEART network! Please hold and we will connect you to the nearest member!",
     array("voice" => "alice")
   );
-echo $response;
+  echo $response;
 });
+Route::post('token', [AuthController::class, 'requestToken']);
+Route::post('register', [AuthController::class, 'register']);
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth:sanctum', 'throttle:6,1'])->name('verification.send');
