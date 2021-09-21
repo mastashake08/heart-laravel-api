@@ -33,7 +33,7 @@ class AuthController extends Controller
     }
 
     public function register(Request $request) {
-      dd($request->all());
+
       $request->validate([
         'email' => 'required|email',
         'password' => 'required',
@@ -42,7 +42,7 @@ class AuthController extends Controller
       ]);
       $user = User::Create([
         'email' => $request->email,
-        'password' => Hash::make($request->password),
+        'password' => Hash::make(json_decode($request->password)),
         'first_name' => $request->name,
         'last_name' => $request->last_name,
         'account_type' => 'Mental Health',
