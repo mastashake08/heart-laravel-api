@@ -33,6 +33,12 @@ class CreateNewUser implements CreatesNewUsers
             'last_name' => $input['last_name'],
             'email' => $input['email'],
             'account_type' => 'Mental Health',
+            'address' => [
+              'street' => '111 main st'
+            ],
+            'mental_health_license_type' => 'asbsd',
+            'mental_health_license_number' => '11111',
+            'mental_health_license_state' => 'KY',
             'password' => Hash::make($input['password']),
         ]);
     }
