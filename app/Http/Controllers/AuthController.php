@@ -46,7 +46,7 @@ class AuthController extends Controller
         'first_name' => $request->first_name,
         'last_name' => $request->last_name,
         'account_type' => 'Mental Health',
-        'address' => json_decode($request->address),
+        'address' => $request->address,
         'mental_health_license_type' => 'asbsd',
         'mental_health_license_number' => '11111',
         'mental_health_license_state' => 'KY'
