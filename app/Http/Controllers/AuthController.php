@@ -48,7 +48,11 @@ class AuthController extends Controller
         // 'address' => $request->address,
         'mental_health_license_type' => 'asbsd',
         'mental_health_license_number' => '11111',
-        'mental_health_license_state' => 'KY'
+        'mental_health_license_state' => 'KY',
+        'profile_photo_path' => 'https://via.placeholder.com/600/d32776',
+        'client_focus_age' => "Toddler",
+        'primary_language' => 'Engligh',
+        'secondary_language' => 'Japanese'
       ]);
 
       $user->createAsStripeCustomer();
