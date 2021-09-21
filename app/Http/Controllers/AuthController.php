@@ -42,13 +42,11 @@ class AuthController extends Controller
       ]);
       $user = User::Create([
         'email' => $request->email,
-        'password' => Hash::make(json_decode($request->password)),
+        'password' => Hash::make($request->password),
         'first_name' => $request->name,
         'last_name' => $request->last_name,
         'account_type' => 'Mental Health',
-        'address' => [
-          'street' => '111 main st'
-        ],
+        'address' => $request->address,
         'mental_health_license_type' => 'asbsd',
         'mental_health_license_number' => '11111',
         'mental_health_license_state' => 'KY'
