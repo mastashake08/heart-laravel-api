@@ -23,8 +23,7 @@ class AuthController extends Controller
           return response()->json(['error' => 'Incorrect credentials!.'], 401);
       }
       $data = [
-        'token' => $user->createToken($request->has('device_name')? $request->device_name : $request->email)->plainTextToken,
-        'user' => new UserResource($user)
+        'token' => $user->createToken($request->has('device_name')? $request->device_name : $request->email)->plainTextToken
       ];
 
       $user->createOrGetStripeCustomer();
