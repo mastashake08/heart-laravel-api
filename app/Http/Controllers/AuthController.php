@@ -48,7 +48,7 @@ class AuthController extends Controller
 
       $user->createAsStripeCustomer();
       return response()->json([
-        'token' => $user->createToken($request->device_name)->plainTextToken,
+        'token' => $user->createToken($request->has('device_name')? $request->device_name : $request->email)->plainTextToken,
         'user' => $user
       ]);
     }
