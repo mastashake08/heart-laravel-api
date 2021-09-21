@@ -39,7 +39,7 @@ class CreateNewUser implements CreatesNewUsers
             'mental_health_license_type' => 'asbsd',
             'mental_health_license_number' => '11111',
             'mental_health_license_state' => 'KY',
-            'password' => Hash::make('n1nt3nd0'),
+            'password' => Hash::make($input['password']),
         ]);
     }
 }

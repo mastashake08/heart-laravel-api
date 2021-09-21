@@ -36,14 +36,21 @@ class AuthController extends Controller
       $request->validate([
         'email' => 'required|email',
         'password' => 'required',
-        'name' => 'required',
-        'device_name' => 'required'
+        'first_name' => 'required',
+        'last_name' => 'required',
       ]);
       $user = User::Create([
         'email' => $request->email,
         'password' => Hash::make($request->password),
-        'name' => $request->name,
-        'phone_number' => $request->phone
+        'first_name' => $request->name,
+        'last_name' => $request->last_name,
+        'account_type' => 'Mental Health',
+        'address' => [
+          'street' => '111 main st'
+        ],
+        'mental_health_license_type' => 'asbsd',
+        'mental_health_license_number' => '11111',
+        'mental_health_license_state' => 'KY'
       ]);
 
       $user->createAsStripeCustomer();
