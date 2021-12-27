@@ -25,7 +25,7 @@
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
               <jet-input id="service" type="text" class="mt-1 block w-full" v-model="form.service" required autofocus placeholder="Search services..."/>
-              <jet-button class="ml-4" :class="{ 'opacity-25' }" >
+              <jet-button class="ml-4" >
                   Search
               </jet-button>
             </div>
