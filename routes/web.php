@@ -31,3 +31,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('therapist', function () {
     return Inertia::render('Welcome');
 })->name('therapist');
+
+Route::get('hotline', function () {
+    return Inertia::render('Welcome');
+})->name('hotline');
