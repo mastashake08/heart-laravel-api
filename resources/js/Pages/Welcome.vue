@@ -181,6 +181,13 @@
 
 <script>
     export default {
+        data () {
+          return {
+            form: {
+              service: ''
+            }
+          }
+        },
         props: {
             canLogin: Boolean,
             canRegister: Boolean,
