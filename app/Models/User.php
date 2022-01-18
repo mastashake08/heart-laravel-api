@@ -19,6 +19,7 @@ class User extends Authenticatable
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use MustVerifyEmail;
 
     /**
      * The attributes that are mass assignable.
