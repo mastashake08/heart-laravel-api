@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('therapist', function () {
   $users = User::all();
     //return Inertia::render('Welcome');
-  return view('therapists.all')->with($users);
+  return view('therapists.all', ['users', $users]);
 })->name('therapist');
 
 Route::get('hotline', function () {
