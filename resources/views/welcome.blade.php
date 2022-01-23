@@ -21,14 +21,14 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1>Paradigm Shift</h1>
-							<p>A free responsive site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a href="https://html5up.net">HTML5 UP</a></p>
+							<h1>{{ config('app.name', 'Laravel') }}</h1>
+							<p>Find a Therapist, Be Informed, Make a Difference</p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="/paradigm-shift/images/pic01.jpg" alt="" /></span>
+							<span class="image fill" data-position="center"><img src="/paradigm-shift/images/front-1.jpg" alt="Black therapist with black man" /></span>
 						</div>
 					</section>
 
@@ -39,7 +39,7 @@
 						</header>
 						<div class="content">
 							<p><strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
-							<span class="image main"><img src="/paradigm-shift/images/pic02.jpg" alt="" /></span>
+							<span class="image main"><img src="/paradigm-shift/images/front-2.jpg" alt="Black woman on phone with therapist" /></span>
 						</div>
 					</section>
 
