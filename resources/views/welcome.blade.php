@@ -11,6 +11,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "HEART Network",
+      "url": "https://joinheartnetwork.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://joinheartnetwork.com/search?q={search_term_string}Search a therapist",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychiatric",
+      "name": "HEART Network",
+      "image": "",
+      "@id": "",
+      "url": "https://joinheartnetwork.com",
+      "telephone": "5023797951",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Louisville",
+        "addressRegion": "KY",
+        "postalCode": "40208",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+</script>
 		<link rel="stylesheet" href="/paradigm-shift/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
