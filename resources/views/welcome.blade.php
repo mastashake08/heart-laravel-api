@@ -455,7 +455,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 					</section>
 
 				<!-- Copyright -->
-					<div class="copyright">&copy; {{env(APP_NAME)}}. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+					<div class="copyright">&copy; {{env('APP_NAME')}}. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
 
 			</div>
 
