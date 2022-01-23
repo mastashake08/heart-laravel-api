@@ -27,6 +27,10 @@ Route::get('therapist', function () {
   $users = User::all();
     //return Inertia::render('Welcome');
   return view('therapists.all', ['users' => $users]);
+})->name('all-therapist');
+
+Route::get('therapist/{id}', function (User $user) {
+  return view('therapists.single', ['user' => $user]);
 })->name('therapist');
 
 Route::get('hotline', function () {
