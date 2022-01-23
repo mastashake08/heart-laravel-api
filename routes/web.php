@@ -30,6 +30,7 @@ Route::get('therapist', function () {
 })->name('all-therapist');
 
 Route::get('therapist/{id}', function (User $user) {
+  dd($user);
   return view('therapists.single', ['user' => $user]);
 })->name('therapist');
 
