@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\User;
+use App\Http\Resources\UserResource;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('therapist', function () {
   $users = User::all();
+  dd(UserResource::collection($users));
     //return Inertia::render('Welcome');
   return view('therapists.all', ['users' => $users]);
 })->name('all-therapist');
