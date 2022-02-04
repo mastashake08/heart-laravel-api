@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('therapists', function () {
     $therapists = \App\Http\Resources\UserResource::collection(\App\Models\User::all());
     $therapists->each(function ($t) {
-      $this->comment(`{$t->first_name} {$t->last_name} - {$t->id}`);
+      $this->comment("`{$t->first_name} {$t->last_name}`");
     });
 
 })->purpose('Display therapists in console');
