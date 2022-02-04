@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Artisan;
 
 Artisan::command('therapists', function () {
     $therapists = \App\Http\Resources\UserResource::collection(\App\Models\User::all());
-    dd($therapists);
+    $therapists->each(function ($t) {
+      $this->comment($t->first_name);
+    });
+
 })->purpose('Display therapists in console');
