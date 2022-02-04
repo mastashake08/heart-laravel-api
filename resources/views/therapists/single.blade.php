@@ -7,7 +7,7 @@
         "@type": "Person",
         "name": "{{$user->first_name}} {{$user->last_name}}",
         "url": "{{url('/therapist/'.$user->id)}}",
-        "image": "{{url($user->profile_photo_path)}}"
+        "image": "$user->profile_photo_path)"
       }
       </script>
         <meta charset="utf-8">
