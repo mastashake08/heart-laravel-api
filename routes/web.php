@@ -27,7 +27,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('therapist', function () {
   $users = User::all();
-  dd(UserResource::collection($users));
   return Inertia::render('Therapist/All', ['users' => UserResource::collection($users)]);
 })->name('all-therapist');
 
