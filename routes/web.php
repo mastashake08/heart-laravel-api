@@ -20,9 +20,18 @@ Route::get('/', function () {
   //return Inertia::render('Welcome');
   return view('welcome');
 });
-Route::inertia('/hotline', 'HotlineComponent')->name('hotline');
-Route::inertia('/about', 'About')->name('about');
-Route::inertia('/pricing', 'Pricing')->name('pricing');
+
+Route::get('hotline', function () {
+  return Inertia::render('HotlineComponent');
+})->name('hotline');
+
+Route::get('about', function () {
+  return Inertia::render('About');
+})->name('about');
+
+Route::get('pricing', function () {
+  return Inertia::render('Pricing');
+})->name('pricing');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
