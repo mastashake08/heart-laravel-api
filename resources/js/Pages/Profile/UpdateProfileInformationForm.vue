@@ -107,9 +107,11 @@
             return {
                 form: this.$inertia.form({
                     _method: 'PUT',
-                    name: this.user.name,
+                    first_name: this.user.first_name,
+                    last_name: this.user.last_name,
                     email: this.user.email,
                     photo: null,
+                    bio: this.user.bio
                 }),
 
                 photoPreview: null,
