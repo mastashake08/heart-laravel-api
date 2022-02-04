@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import AppLayout from '@/Layouts/AppLayout'
 import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo'
 import Label from '@/Jetstream/Label'
 export default {
@@ -31,6 +32,8 @@ export default {
 
     components: {
         JetAuthenticationCardLogo,
+        Label,
+        AppLayout
     },
 }
 </script>
