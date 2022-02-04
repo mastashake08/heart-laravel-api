@@ -168,13 +168,13 @@
 				<!-- Section -->
 					<section>
 						<header>
-							<h2>Duis sed adpiscing veroeros amet</h2>
+							<h2>Extending HEART</h2>
 						</header>
 						<div class="content">
 							<p><strong>Proin tempus feugiat</strong> sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.</p>
 							<ul class="actions">
 								<li><a href="#" class="button primary large">Get Started</a></li>
-								<li><a href="#" class="button large">Learn More</a></li>
+								<li><a href="{{url('/hotline')}}" class="button large">HEART Network</a></li>
 							</ul>
 						</div>
 					</section>
