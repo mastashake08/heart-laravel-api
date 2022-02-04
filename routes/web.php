@@ -35,6 +35,7 @@ Route::get('therapist', function () {
 })->name('all-therapist');
 
 Route::get('therapist/{id}', function (User $user) {
-  dd(new UserResource($user));
-  return Inertia::render('Therapist/Single', ['user' => new UserResource($user)]);
+  //dd(new UserResource($user));
+  //return Inertia::render('Therapist/Single', ['user' => new UserResource($user)]);
+  return view('therapists.single', ['user' => new UserResource($user)]);
 })->name('therapist');
