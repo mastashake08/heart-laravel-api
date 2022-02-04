@@ -22,6 +22,7 @@ Route::get('/', function () {
 });
 Route::inertia('/hotline', 'HotlineComponent');
 Route::inertia('/about', 'About');
+Route::inertia('/pricing', 'Pricing');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
