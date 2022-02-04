@@ -2,7 +2,7 @@
     <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Welcome To HEART
+              Heart Hotline
             </h2>
         </template>
 
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import AppLayout from '@/Layouts/AppLayout'
 import JetAuthenticationCardLogo from '@/Jetstream/AuthenticationCardLogo'
 
 export default {
@@ -30,6 +31,7 @@ export default {
 
     components: {
         JetAuthenticationCardLogo,
+        AppLayout
     },
 }
 </script>
