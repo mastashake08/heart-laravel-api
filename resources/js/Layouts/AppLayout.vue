@@ -21,6 +21,24 @@
                                     Dashboard
                                 </jet-nav-link>
                             </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('therapists')" :active="route().current('therapists')">
+                                    Find A Provider
+                                </jet-nav-link>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('hotline')" :active="route().current('hotline')">
+                                    HEART Network
+                                </jet-nav-link>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('pricing')" :active="route().current('pricing')">
+                                    Pricing
+                                </jet-nav-link>
+                            </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">

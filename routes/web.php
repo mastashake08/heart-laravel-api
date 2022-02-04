@@ -20,9 +20,9 @@ Route::get('/', function () {
   //return Inertia::render('Welcome');
   return view('welcome');
 });
-Route::inertia('/hotline', 'HotlineComponent');
-Route::inertia('/about', 'About');
-Route::inertia('/pricing', 'Pricing');
+Route::inertia('/hotline', 'HotlineComponent')->name('hotline');
+Route::inertia('/about', 'About')->name('about');
+Route::inertia('/pricing', 'Pricing')->name('pricing');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -32,7 +32,7 @@ Route::get('therapist', function () {
   $users = User::all();
   return Inertia::render('Therapist/All', ['users' => UserResource::collection($users)]);
   //return view('therapists.all', ['users' => UserResource::collection($users)]);
-})->name('all-therapist');
+})->name('therapists');
 
 Route::get('therapist/{id}', function (User $user) {
   //dd(new UserResource($user));
