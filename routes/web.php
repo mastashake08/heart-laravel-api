@@ -17,7 +17,7 @@ use App\Http\Resources\UserResource;
 */
 
 Route::get('/', function () {
-  return Inertia::render('Welcome');
+  return Inertia::render('Jetstream/Welcome');
     //return view('welcome');
 });
 Route::inertia('/hotline', 'HotlineComponent');
