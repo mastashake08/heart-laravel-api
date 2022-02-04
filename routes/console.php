@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+Artisan::command('therapists', function () {
+    $therapists = \App\Http\Resources\UserResource::collection(\App\Models\User::all());
+    dd($therapists);
+})->purpose('Display therapists in console');

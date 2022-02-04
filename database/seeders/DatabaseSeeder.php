@@ -13,6 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(1000)->hasAppointments()->create();
+        \App\Models\User::factory(500)->hasAppointments()->create();
     }
 }
