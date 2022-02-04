@@ -19,6 +19,7 @@ use App\Http\Resources\UserResource;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::inertia('/hotline', 'HotlineComponent');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -27,15 +28,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('therapist', function () {
   $users = User::all();
   dd(UserResource::collection($users));
-    //return Inertia::render('Welcome');
-  return view('therapists.all', ['users' => $users]);
+  return Inertia::render('Therapist/All', ['users' => UserResource::collection($users)]);
 })->name('all-therapist');
 
 Route::get('therapist/{id}', function (User $user) {
-  dd($user);
-  return view('therapists.single', ['user' => $user]);
+  dd(new UserResource($user));
+  return Inertia::render('Therapist/Single', ['user' => new UserResource($user)]);
 })->name('therapist');
-
-Route::get('hotline', function () {
-    return Inertia::render('Welcome');
-})->name('hotline');
