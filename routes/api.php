@@ -39,10 +39,9 @@ Route::post('/sms', function(Request $request) {
 Route::post('/voice', function(Request $request){
   header("content-type: text/xml");
   $response->say(
-    "Welcome to the HEART network! Please hold and we will connect you to the nearest member!",
-    array("voice" => "alice")
+    "Welcome to the HEART network! Please hold and we will connect you to the nearest member!"
   );
-  echo $response;
+  return $response;
 });
 Route::post('token', [AuthController::class, 'requestToken']);
 Route::post('register', [AuthController::class, 'register']);
