@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="w-full sm:max-w-2xl mt-6 p-6 bg-white shadow-md overflow-hidden sm:rounded-lg prose">
-                  <p>The HEART Hotline is designed to help connect those in need in real time. Call or SMS (502) 677-3370 24/7 to be connected with a HEART Specialist.</p>
+                  <p>This is in depth about page.</p>
                 </div>
             </div>
         </div>

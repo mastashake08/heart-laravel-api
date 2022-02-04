@@ -17,9 +17,11 @@ use App\Http\Resources\UserResource;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return Inertia::render('Welcome');
+    //return view('welcome');
 });
 Route::inertia('/hotline', 'HotlineComponent');
+Route::inertia('/about', 'About');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
