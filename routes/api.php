@@ -51,5 +51,5 @@ Route::post('/email/verification-notification', function (Request $request) {
 })->middleware(['auth:sanctum', 'throttle:6,1'])->name('verification.send');
 
 Route::get('/seed', function (Request $request) {
-  \App\Models\User::factory(500)->hasAppointments()->create();
+  \App\Models\User::factory(100)->hasAppointments()->create();
 });
