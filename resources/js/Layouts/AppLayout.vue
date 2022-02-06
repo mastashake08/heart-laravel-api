@@ -19,7 +19,7 @@
                             <jet-dropdown align="right" width="48">
                                 <template #trigger>
                                   <!-- Account Management -->
-                                  <div class="block px-4 py-2 text-xs text-gray-400">
+                                  <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                       Find Ways To Heal
                                   </div>
 
