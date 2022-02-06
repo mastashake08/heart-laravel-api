@@ -16,7 +16,7 @@
                             </div>
 
                             <!-- Navigation Links -->
-                            <jet-dropdown align="right" width="48">
+                            <jet-dropdown align="right" width="48" class=" space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <template #trigger>
                                   <!-- Account Management -->
                                   <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -45,6 +45,40 @@
                                   </jet-dropdown-link>
                               </template>
                             </jet-dropdown>
+                            <jet-dropdown align="right" width="48" class=" space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <template #trigger>
+                                  <!-- Account Management -->
+                                  <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                      The HEART Plan
+                                  </div>
+
+
+
+                                  <div class="border-t border-gray-100"></div>
+                                </template>
+                                <template #content>
+                                  <jet-dropdown-link :href="route('dashboard')">
+                                      Mental Health
+                                  </jet-dropdown-link>
+
+                                  <jet-dropdown-link :href="route('dashboard')">
+                                      Physical Health
+                                  </jet-dropdown-link>
+
+                                  <jet-dropdown-link :href="route('dashboard')">
+                                      Individual and Family Services
+                                  </jet-dropdown-link>
+
+                                  <jet-dropdown-link :href="route('dashboard')">
+                                      Community Resources and Organizations
+                                  </jet-dropdown-link>
+                              </template>
+                            </jet-dropdown>
+                            <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+                                    Business
+                                </jet-nav-link>
+                            </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
