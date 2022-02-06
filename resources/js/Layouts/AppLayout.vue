@@ -16,6 +16,35 @@
                             </div>
 
                             <!-- Navigation Links -->
+                            <jet-dropdown align="right" width="48">
+                                <template #trigger>
+                                  <!-- Account Management -->
+                                  <div class="block px-4 py-2 text-xs text-gray-400">
+                                      Find Ways To Heal
+                                  </div>
+
+
+
+                                  <div class="border-t border-gray-100"></div>
+                                </template>
+                                <template #content>
+                                  <jet-dropdown-link :href="route('#')">
+                                      Mental Health
+                                  </jet-dropdown-link>
+
+                                  <jet-dropdown-link :href="route('#')">
+                                      Physical Health
+                                  </jet-dropdown-link>
+
+                                  <jet-dropdown-link :href="route('#')">
+                                      Individual and Family Services
+                                  </jet-dropdown-link>
+
+                                  <jet-dropdown-link :href="route('#')">
+                                      Community Resources and Organizations
+                                  </jet-dropdown-link>
+                              </template>
+                            </jet-dropdown>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
