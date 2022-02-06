@@ -28,19 +28,19 @@
                                   <div class="border-t border-gray-100"></div>
                                 </template>
                                 <template #content>
-                                  <jet-dropdown-link :href="route('#')">
+                                  <jet-dropdown-link :href="route('dashboard')">
                                       Mental Health
                                   </jet-dropdown-link>
 
-                                  <jet-dropdown-link :href="route('#')">
+                                  <jet-dropdown-link :href="route('dashboard')">
                                       Physical Health
                                   </jet-dropdown-link>
 
-                                  <jet-dropdown-link :href="route('#')">
+                                  <jet-dropdown-link :href="route('dashboard')">
                                       Individual and Family Services
                                   </jet-dropdown-link>
 
-                                  <jet-dropdown-link :href="route('#')">
+                                  <jet-dropdown-link :href="route('dashboard')">
                                       Community Resources and Organizations
                                   </jet-dropdown-link>
                               </template>
